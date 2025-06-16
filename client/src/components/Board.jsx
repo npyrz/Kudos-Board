@@ -18,6 +18,3 @@ function Board() {
 }
 
 export default Board
-
-
-// IMG | TITLE | DESCRIPTION | VIEW BOARD | DELETE BOARD|
