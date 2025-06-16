@@ -1,0 +1,29 @@
+.Search {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.search-input {
+    width: 300px;
+    height: 23px;
+    padding: 10px;
+    border-radius: 10px;
+    border-color: black;
+    border-style: outset;
+}
+
+input::placeholder {
+    color: black;
+}
+
+.search-button {
+    margin-left: 15px;
+    background-color: #3EB489;
+    color: black;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 15px;
+    border: none;
+    padding: 14px;
+}
