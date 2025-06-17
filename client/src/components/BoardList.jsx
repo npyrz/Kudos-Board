@@ -6,12 +6,12 @@ function BoardList() {
     return (
     <div className='BoardList'>
         <Board/>
-         <Board/>
-          <Board/>
-           <Board/>
-            <Board/>
-             <Board/>
-              <Board/>
+        <Board/>
+        <Board/>
+        <Board/>
+        <Board/>
+        <Board/>
+        <Board/>
     </div>
     )
 }
