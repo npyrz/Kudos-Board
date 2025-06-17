@@ -21,7 +21,7 @@ function NewBoard() {
                 <div className="modal-content">
                     <button className="exitButton" onClick={handleClose}><i className="fa fa-close"></i></button>
                     <h1>Create a New Board</h1>
-                    <h3>TItle:</h3>
+                    <h3>Title:</h3>
                     <input className='board-input'/>
                     <h3>Category:</h3>
                     <form>
