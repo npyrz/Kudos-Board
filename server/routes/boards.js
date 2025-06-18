@@ -1,10 +1,9 @@
 const express = require('express');
 const router = express.Router();
-
 const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient()
 
-// DISPLAYING ALL THE BOARDS
+// DISPLAYING ALL THE BOARDS | SEARCHING FOR BOARDS | GETTING BOARDS BASED OFF TAGS
 router.get('/boards', async (req, res) => {
     const { q, c } = req.query;
     
