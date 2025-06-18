@@ -13,20 +13,19 @@ function Board() {
         })
     },[]);
 
-    const handleDelete = async (petId) => {
+    const handleDelete = async (boardId) => {
     try {
-        const response = await fetch(`http://localhost:3000/boards/${petId}`, {
+        const response = await fetch(`http://localhost:3000/boards/${boardId}`, {
             method: "DELETE",
-            credentials: "include", // Include credentials
+            credentials: "include",
         });
 
         if (response.ok) {
-            console.log("Pet deleted successfully");
-            //navigate('/'); // Navigate to the home page
-            window.location.reload(); // Reload the homepage
+            //navigate('/');
+            window.location.reload();
         } else {
             const data = await response.json();
-            console.error("Failed to delete pet:", data.error);
+            console.error("Failed to delete board:", data.error);
         }
     } catch (error) {
         console.error("Network error. Please try again.", error);
