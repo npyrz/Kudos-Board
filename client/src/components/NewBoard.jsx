@@ -55,19 +55,19 @@ function NewBoard() {
                         <button className="exitButton" onClick={handleClose}><i className="fa fa-close"></i></button>
                         <h1>Create a New Board</h1>
                         <h3>Title:</h3>
-                        <input className='board-input' name='title'/>
+                        <input className='board-input' name='title' required/>
                         <h3>Category:</h3>
-                        <select id='selectTag' className='board-input' name='category'>
-                            <option value='celebration'>Select a category</option>
+                        <select id='selectTag' className='board-input' name='category' required defaultValue="">
+                            <option value="">Select a category</option>
                             <option value='celebration'>Celebration</option>
                             <option value='thank-you'>Thank You</option>
                             <option value='inspiration'>Inspiration</option>
                         </select>
                         <h3>Author:</h3>
                         <input className='board-input' name='author'/>
-                    <div className='buttonDiv'>
-                        <button className='createButton'>Create Board</button>
-                    </div>
+                        <div className='buttonDiv'>
+                            <button className='createButton'>Create Board</button>
+                        </div>
                     </form>
                 </div>
             </div>
