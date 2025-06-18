@@ -1,18 +1,21 @@
 const express = require('express')
 const app = express()
+const cors = require('cors')
 const PORT = 3000
+
+app.use(cors({
+  origin: 'http://localhost:5173',
+    credentials: true
+}))
+
 
 app.use(express.json())
 
-const boardRoutes = require('./routes/boards');
-const cardRoutes = require('./routes/cards')
+const boards = require('./routes/boards')
+// const cards = require('./routes/cards')
 
-app.get('/', (req, res) => {
-    //res.send("") <- ADD HERE
-})
-
-app.use('/boards', boardRoutes);
-app.use('/boards/:id/cards', cardRoutes);
+app.use(boards)
+// app.use(cards)
 
 app.listen(PORT, () =>  {
     console.log(`Server running at http://localhost:${PORT}`);

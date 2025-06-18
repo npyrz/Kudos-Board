@@ -1,11 +1,12 @@
-const express = require('express')
-const { PrismaClient } = require('./../generated/prisma')
-const router = express.Router()
-const prisma = new PrismaClient();
+const express = require('express');
+const router = express.Router();
+
+const { PrismaClient } = require('@prisma/client');
+const prisma = new PrismaClient()
 
 // ADDING A NEW CARD IN A BOARD -> GIVES IT A SPECIFIC ID
 router.post('/boards/:id/cards', async (req, res) => {
-
+    
 });
 
 // DELETING A SPECIFIC CARD IN A BOARD

@@ -1,7 +1,7 @@
 import './App.css'
 import Navbar from './components/Navbar'
 import Banner from './components/Banner'
-import BoardList from './components/BoardList'
+import Boards from './components/Boards'
 import Footer from './components/Footer'
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
     <div className='App'>
       <Banner/>
       <Navbar/>
-      <BoardList/>
+      <Boards/>
       <Footer/>
     </div>
   )
