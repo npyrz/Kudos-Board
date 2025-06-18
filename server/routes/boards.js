@@ -7,14 +7,28 @@ const prisma = new PrismaClient()
 
 // DISPLAYING ALL THE BOARDS
 router.get('/boards', async (req, res) => {
+    const { q } = req.query;
+    
     try {
-        const boards = await prisma.boards.findMany()
+        let boards;
+        if (q != '') {
+            boards = await prisma.boards.findMany({
+                where: {
+                    title: {
+                        contains: q,
+                    },
+                },
+            });
+        } else {
+            boards = await prisma.boards.findMany()
+        }
         res.json(boards)
     } catch (error) {
         console.error("Error fetching boards:", error)
         res.status(500).json({ error: "Something went wrong while fetching boards." })
     }
 })
+
 // ADDING A NEW BOARD 
 router.post('/boards', async (req, res) => {
     const { title, category, author } = req.body;
