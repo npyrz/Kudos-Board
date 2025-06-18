@@ -1,4 +1,12 @@
 .Board {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.board-card {
     margin-top: 25px;
     padding: 15px;
     display: flex;
