@@ -42,7 +42,7 @@ function NewBoard() {
         console.error("Network error. Please try again.", error);
         console.log('test3')
         }
-        };
+    };
 
 
     return (
