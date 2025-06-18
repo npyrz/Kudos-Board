@@ -16,9 +16,7 @@ router.get('/boards', async (req, res) => {
                     title: {
                         contains: q,
                     },
-                    category: {
-                        contains: c, // change from contains to actual direct name
-                    },
+                    category: c,
                 },
             });
         } else {

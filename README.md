@@ -22,23 +22,23 @@ Deployed Application (**required**): [Kudos Board Deployed Site](ADD_LINK_HERE)
   - [X] For each board displayed, users can see:
     - [X] An image/gif
     - [X] A board title
-- [ ] **Filter Boards**
-  - [ ] Home page includes navigation bar, drop down, or some other mechanism which allows users to filter boards by the following categories:
+- [X] **Filter Boards**
+  - [X] Home page includes navigation bar, drop down, or some other mechanism which allows users to filter boards by the following categories:
     - [ ] All/Home (displays all boards)
     - [ ] Recent (displays the 6 most recently created boards)
-    - [ ] Celebration
-    - [ ] Thank you
-    - [ ] Inspiration
-  - [ ] When a category is clicked, boards matching the specified category are displayed.
-- [ ] **Search Functionality**
-  - [ ] Users can use a search bar to search for boards by title on the home page.
-  - [ ] The search bar should include:
-    - [ ] Text input field
-    - [ ] Submit/Search Button
+    - [X] Celebration
+    - [X] Thank you
+    - [X] Inspiration
+  - [X] When a category is clicked, boards matching the specified category are displayed.
+- [X] **Search Functionality**
+  - [X] Users can use a search bar to search for boards by title on the home page.
+  - [X] The search bar should include:
+    - [X] Text input field
+    - [X] Submit/Search Button
     - [ ] Clear Mechanism
-  - [ ] Boards with a title containing the search query in the text input field are displayed in a grid view when the user:
-    - [ ] Presses the Enter key
-    - [ ] Clicks the Submit/Search button 
+  - [X] Boards with a title containing the search query in the text input field are displayed in a grid view when the user:
+    - [X] Presses the Enter key
+    - [X] Clicks the Submit/Search button 
   - [ ] User can delete all text from the text input field. 
   - [ ] When all text is cleared from the text input field, all boards are displayed in a grid view
 - [ ] **View Board** 
