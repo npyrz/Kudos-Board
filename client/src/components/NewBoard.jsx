@@ -1,4 +1,4 @@
-import './css/NewBoard.css'
+import '/src/components/css/NewBoard.css'
 import { useState } from 'react'
 
 function NewBoard() {

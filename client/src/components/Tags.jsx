@@ -1,4 +1,4 @@
-import './css/Tags.css'
+import '/src/components/css/Tags.css'
 
 function Tags( {handleBoardTag} ) {
     const handleTagChange = (event) => {

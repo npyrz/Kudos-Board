@@ -1,4 +1,4 @@
-import './css/Card.css'
+import '/src/components/css/Card.css'
 
 function Card() {
 

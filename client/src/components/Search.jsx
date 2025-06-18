@@ -1,4 +1,4 @@
-import './css/Search.css'
+import '/src/components/css/Search.css'
 
 function Search( {handleBoardSearch} ) {
     const handleForm = (event) => {

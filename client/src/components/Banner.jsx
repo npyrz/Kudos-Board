@@ -1,4 +1,4 @@
-import './css/Banner.css'
+import '/src/components/css/Banner.css'
 
 function Banner() {
 

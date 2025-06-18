@@ -1,4 +1,4 @@
-import './css/Boards.css'
+import '/src/components/css/Boards.css'
 import BoardInfo from './BoardInfo'
 
 function Board( { board }) {

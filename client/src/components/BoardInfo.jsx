@@ -1,4 +1,4 @@
-import './css/BoardInfo.css'
+import '/src/components/css/BoardInfo.css'
 import Card from './Card'
 
 function BoardInfo() {
