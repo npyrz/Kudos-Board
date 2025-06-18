@@ -1,7 +1,6 @@
 const express = require('express')
 const app = express()
 const cors = require('cors')
-const PORT = 3000
 
 app.use(cors({
     //origin: 'http://localhost:5173',
@@ -17,7 +16,3 @@ const boards = require('./routes/boards')
 
 app.use(boards)
 // app.use(cards)
-
-app.listen(PORT, () =>  {
-    console.log(`Server running at http://localhost:${PORT}`);
-})
