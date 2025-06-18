@@ -1,17 +1,7 @@
 import './css/Boards.css'
 import BoardInfo from './BoardInfo'
-import { useState, useEffect } from 'react'
 
-function Board() {
-    const [board, setBoard] = useState([]);
-
-    useEffect(() => {
-        fetch('http://localhost:3000/boards')
-        .then(response => response.json())
-        .then((data) => {
-        setBoard(data);
-        })
-    },[]);
+function Board( { board }) {
 
     const handleDelete = async (boardId) => {
     try {
@@ -21,8 +11,7 @@ function Board() {
         });
 
         if (response.ok) {
-            //navigate('/');
-            window.location.reload();
+            window.location.reload(); // Remove when react router is in place -> navigate('/');
         } else {
             const data = await response.json();
             console.error("Failed to delete board:", data.error);
