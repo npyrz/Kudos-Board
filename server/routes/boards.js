@@ -4,18 +4,20 @@ const router = express.Router();
 const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient()
 
-
 // DISPLAYING ALL THE BOARDS
 router.get('/boards', async (req, res) => {
-    const { q } = req.query;
+    const { q, c } = req.query;
     
     try {
         let boards;
-        if (q != '') {
+        if (q != '' || t!= '') {
             boards = await prisma.boards.findMany({
                 where: {
                     title: {
                         contains: q,
+                    },
+                    category: {
+                        contains: c, // change from contains to actual direct name
                     },
                 },
             });

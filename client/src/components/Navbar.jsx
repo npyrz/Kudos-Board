@@ -3,12 +3,12 @@ import Search from './Search'
 import Tags from './Tags'
 import NewBoard from './NewBoard'
 
-function Navbar( {handleBoardSearch }) {
+function Navbar( {handleBoardSearch, handleBoardTag }) {
 
     return (
     <div className='Navbar'>
         <Search handleBoardSearch={handleBoardSearch}/>
-        <Tags/>
+        <Tags handleBoardTag={handleBoardTag}/>
         <NewBoard/>
     </div>
     )
