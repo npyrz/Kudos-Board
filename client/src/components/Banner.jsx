@@ -4,7 +4,7 @@ function Banner() {
 
     return (
     <div className='Banner'>
-        <img src='assets/kudoboard_logo.png' alt='logoImage' className='logoImage'/>
+        <img src='/src/assets/kudoboard_logo.png' alt='logoImage' className='logoImage'/>
     </div>
     )
 }
