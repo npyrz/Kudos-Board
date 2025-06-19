@@ -1,5 +1,6 @@
 import './App.css'
 import Navbar from './components/Navbar'
+import { baseURL } from './global'
 import Banner from './components/Banner'
 import Boards from './components/Boards'
 import Footer from './components/Footer'
@@ -12,7 +13,7 @@ function App() {
 
   // REGULAR FETCH CALL TO DISPLAY ALL BOARDS
   useEffect(() => {
-      fetch('http://localhost:3000/boards')
+      fetch(`${baseURL}/boards`)
       .then(response => response.json())
       .then((data) => {
         setBoard(data);
