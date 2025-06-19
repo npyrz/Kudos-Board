@@ -1,10 +1,10 @@
 import './App.css'
 import Navbar from './components/Navbar'
-import { baseURL } from './global'
 import Banner from './components/Banner'
 import Boards from './components/Boards'
 import Footer from './components/Footer'
 import { useEffect, useState } from 'react'
+import { baseURL } from './global'
 
 function App() {
   const [board, setBoard] = useState([]);
