@@ -24,8 +24,8 @@ Deployed Application (**required**): [Kudos Board Deployed Site](ADD_LINK_HERE)
     - [X] A board title
 - [X] **Filter Boards**
   - [X] Home page includes navigation bar, drop down, or some other mechanism which allows users to filter boards by the following categories:
-    - [ ] All/Home (displays all boards)
-    - [ ] Recent (displays the 6 most recently created boards)
+    - [X] All/Home (displays all boards)
+    - [X] Recent (displays the 6 most recently created boards)
     - [X] Celebration
     - [X] Thank you
     - [X] Inspiration
@@ -39,7 +39,7 @@ Deployed Application (**required**): [Kudos Board Deployed Site](ADD_LINK_HERE)
   - [X] Boards with a title containing the search query in the text input field are displayed in a grid view when the user:
     - [X] Presses the Enter key
     - [X] Clicks the Submit/Search button 
-  - [ ] User can delete all text from the text input field. 
+  - [X] User can delete all text from the text input field. 
   - [ ] When all text is cleared from the text input field, all boards are displayed in a grid view
 - [ ] **View Board** 
   - [ ] Users can click on a board in the grid view to navigate to a new page containing that board's details.
@@ -79,9 +79,9 @@ Deployed Application (**required**): [Kudos Board Deployed Site](ADD_LINK_HERE)
 - [ ] **Delete Card**
   - [ ] Users can delete cards.
   - [ ] When the user clicks the delete button for a card, the card disappears from the grid of cards. 
-- [ ] **Deployment**
-  - [ ] Website is deployed via Render.
-  - [ ] **VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS**: For ease of grading, please use the deployed version of your website when creating your walkthrough. 
+- [X] **Deployment**
+  - [X] Website is deployed via Render.
+  - [X] **VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS**: For ease of grading, please use the deployed version of your website when creating your walkthrough. 
 
 ####  Stretch Features
 

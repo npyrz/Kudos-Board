@@ -5,6 +5,7 @@ import Boards from './components/Boards'
 import Footer from './components/Footer'
 import { useEffect, useState } from 'react'
 import { baseURL } from './global'
+import { Routes, Route, BrowserRouter } from 'react-router';
 
 function App() {
   const [board, setBoard] = useState([]);
@@ -22,7 +23,7 @@ function App() {
 
   // FETCH CALL FOR DISPLAYING SEARCH QUERY'S
   useEffect(() => {
-      if (query != '') {  
+      if (query != '') {
       fetch(`${baseURL}/boards?q=${query}`)
       .then(response => response.json())
       .then((data) => {
@@ -33,13 +34,17 @@ function App() {
 
   // FETCH CALL FOR TAG TOGGLE DISPLAY
   useEffect(() => {
-    if (tag != '') {  
-    fetch(`${baseURL}/boards?c=${tag}`)
+    let fetchUrl = `${baseURL}/boards`;
+    if (tag && tag != 'all') {
+      fetchUrl += `?c=${tag}`
+    }
+
+    fetch(fetchUrl)
     .then(response => response.json())
     .then((data) => {
       setBoard(data);
     })
-  }
+
   },[tag]);
 
   const handleBoardSearch = (query) => {
@@ -52,10 +57,31 @@ function App() {
 
   return (
     <div className='App'>
-      <Banner/>
-      <Navbar handleBoardSearch={handleBoardSearch} handleBoardTag={handleBoardTag}/>
-      <Boards board={board} />
-      <Footer/>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={
+            <>
+              <Banner/>
+              <Navbar handleBoardSearch={handleBoardSearch} handleBoardTag={handleBoardTag}/>
+              <Boards board={board}/>
+              <Footer/>
+            </>
+          }/>
+          <Route path="/boards/*" element={
+            <>
+              <Banner/>
+              <Footer/>
+            </>
+          }/>
+          <Route path="/*" element={
+            <>
+              <Banner/>
+              {/* ADD: EROR PAGE */}
+              <Footer/>
+            </>
+          }/>
+        </Routes>
+      </BrowserRouter>
     </div>
   )
 }

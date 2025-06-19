@@ -3,14 +3,9 @@ import '/src/components/css/Tags.css'
 function Tags( {handleBoardTag} ) {
     const handleTagChange = (event) => {
         console.log(event.target.value)
+        const value = event.target.value;
         if (handleBoardTag) {
-            if (event.target.value === 'all') {
-                console.log("test1")
-            } else if (event.target.value === 'recent') {
-                console.log("test2")
-            } else {
-                handleBoardTag(event.target.value);
-            }
+            handleBoardTag(value);
         }
     }
 
