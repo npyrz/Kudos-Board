@@ -1,11 +1,12 @@
 import '/src/components/css/Boards.css'
 import BoardInfo from './BoardInfo'
+import { baseURL } from '../global';
 
 function Board( { board }) {
 
     const handleDelete = async (boardId) => {
     try {
-        const response = await fetch(`http://localhost:3000/boards/${boardId}`, {
+        const response = await fetch(`${baseURL}/boards/${boardId}`, {
             method: "DELETE",
             credentials: "include",
         });
