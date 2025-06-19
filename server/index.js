@@ -21,5 +21,5 @@ app.use(boards)
 // app.use(cards)
 
 app.listen(PORT, () =>  {
-    console.log(`Server running at http://localhost:${PORT}`);
+    console.log(`Server running`);
 })
