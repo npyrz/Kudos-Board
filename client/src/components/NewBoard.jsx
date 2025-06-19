@@ -1,5 +1,6 @@
 import '/src/components/css/NewBoard.css'
 import { useState } from 'react'
+import { baseURL } from '../global';
 
 function NewBoard() {
     const [modalStatus, setModalStatus] = useState(false);
@@ -20,7 +21,7 @@ function NewBoard() {
         const newBoard = { title, category, author};
 
         try {
-            const response = await fetch(`http://localhost:3000/boards`, {
+            const response = await fetch(`${baseURL}/boards`, {
             method: 'POST',
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(newBoard),
