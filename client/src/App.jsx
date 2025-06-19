@@ -23,7 +23,7 @@ function App() {
   // FETCH CALL FOR DISPLAYING SEARCH QUERY'S
   useEffect(() => {
       if (query != '') {  
-      fetch(`http://localhost:3000/boards?q=${query}`)
+      fetch(`${baseURL}/boards?q=${query}`)
       .then(response => response.json())
       .then((data) => {
         setBoard(data);
@@ -34,7 +34,7 @@ function App() {
   // FETCH CALL FOR TAG TOGGLE DISPLAY
   useEffect(() => {
     if (tag != '') {  
-    fetch(`http://localhost:3000/boards?c=${tag}`)
+    fetch(`${baseURL}/boards?c=${tag}`)
     .then(response => response.json())
     .then((data) => {
       setBoard(data);
