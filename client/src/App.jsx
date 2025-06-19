@@ -62,8 +62,8 @@ function App() {
           <Route path="/" element={
             <>
               <Banner/>
-              <Navbar handleBoardSearch={handleBoardSearch} handleBoardTag={handleBoardTag}/>
-              <Boards board={board}/>
+              <Navbar handleBoardSearch={handleBoardSearch} handleBoardTag={handleBoardTag} setBoard={setBoard} board={board}/>
+              <Boards board={board} setBoard={setBoard}/>
               <Footer/>
             </>
           }/>

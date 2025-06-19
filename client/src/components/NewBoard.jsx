@@ -2,7 +2,7 @@ import '/src/components/css/NewBoard.css'
 import { useState } from 'react'
 import { baseURL } from '../global';
 
-function NewBoard() {
+function NewBoard( { setBoard, board }) {
     const [modalStatus, setModalStatus] = useState(false);
 
     const handleOpen = () => {
@@ -31,10 +31,8 @@ function NewBoard() {
         const data = await response.json();
 
         if (response.ok) {
+            setBoard([...board, data]);
             handleClose();
-            //navigate('/');
-            window.location.reload();
-            console.log("test1")
         } else {
             console.error("Failed to add the board:", data.error);
             console.log('test2')

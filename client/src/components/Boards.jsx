@@ -2,7 +2,7 @@ import '/src/components/css/Boards.css'
 import BoardInfo from './BoardInfo'
 import { baseURL } from '../global';
 
-function Board( { board }) {
+function Board( { board, setBoard }) {
 
     const handleDelete = async (boardId) => {
     try {
@@ -12,7 +12,7 @@ function Board( { board }) {
         });
 
         if (response.ok) {
-            window.location.reload(); // Remove when react router is in place -> navigate('/');
+            setBoard(prev => prev.filter(prevBoard=> prevBoard.id !== boardId));
         } else {
             const data = await response.json();
             console.error("Failed to delete board:", data.error);
@@ -25,7 +25,7 @@ function Board( { board }) {
     return (
     <div className='Board'>
         {board.map((item, imageIndex) => (
-            <div className="board-card">
+            <div className="board-card" key={item.id}>
                 <img src={`https://picsum.photos/200/300?random=${imageIndex}`} alt='boardImage' className='imgBoard'/>
                 <h2>{item.title} </h2>
                 <p>{item.author}</p>
