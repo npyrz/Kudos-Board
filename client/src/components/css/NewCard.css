@@ -1,0 +1,66 @@
+.NewBoard {
+    text-align: center;
+}
+
+.newBoard-button {
+    background-color: #B6FFBB;
+    color: black;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 15px;
+    border: none;
+    padding: 10px;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #aaf0d1;
+    padding: 20px;
+    width: 550px;
+    border-radius: 8px;
+}   
+
+.exitButton {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: auto;
+    background-color: transparent;
+    border: none;
+    font-size: 30px;
+    color: white;
+}
+
+.createButton {
+    background-color: #3EB489;
+    color: black;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 15px;
+    border: none;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.board-input {
+    width: 275px;
+    padding: 10px;
+    border-radius: 10px;
+    border-color: black;
+    border-style: outset;
+}
+
+input::placeholder {
+    color: black;
+}

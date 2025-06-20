@@ -1,6 +1,6 @@
 import '/src/components/css/Boards.css'
 import { baseURL } from '../global';
-import { useNavigate, Link } from 'react-router';
+import { useNavigate } from 'react-router';
 
 function Board( { board, setBoard }) {
     const navigate = useNavigate();

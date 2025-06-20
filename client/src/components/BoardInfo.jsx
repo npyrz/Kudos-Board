@@ -1,21 +1,21 @@
 import '/src/components/css/BoardInfo.css'
 import Card from './Card'
-import { useEffect} from 'react'
 import { useParams } from 'react-router'
-import { baseURL } from '../global'
+import NewCard from './NewCard'
 
-function BoardInfo() {
+function BoardInfo( { board } ) {
     const { id } = useParams();
-    useEffect(() => {
-        fetch(`${baseURL}/boards/${id}`)
-        .then(res => res.json())
-        .then(data => setBoard(data))
-        .catch(err => console.error("Error fetching board:", err))
-    }, [id]);
+    console.log(id)
+    console.log(board)
+
+    const boardInfo = board.find((b) => b.id === parseInt(id));
+
+    console.log(boardInfo.title)
 
     return (
     <div className='BoardInfo'>
-        <button>Create Card</button>
+        <h1>{boardInfo.title}</h1>
+        <NewCard/>
         <Card/>
     </div>
     )

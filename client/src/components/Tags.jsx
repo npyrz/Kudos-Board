@@ -11,11 +11,11 @@ function Tags( {handleBoardTag} ) {
 
     return (
     <div className='Tags'>
-        <button className='tag-button' value="all" name="all" onClick={handleTagChange}>All</button>
-        <button className='tag-button' value="recent" name='recent' onClick={handleTagChange}>Recent</button>
-        <button className='tag-button' value='celebration' name='celebration' onClick={handleTagChange}>Celebration</button>
-        <button className='tag-button' value='thank-you' name='thank-you' onClick={handleTagChange}>Thank You</button>
-        <button className='tag-button' value='inspiration' name='inspiration' onClick={handleTagChange}>Inspiration</button>
+        <button className='tag-button' value="all" onClick={handleTagChange}>All</button>
+        <button className='tag-button' value="recent" onClick={handleTagChange}>Recent</button>
+        <button className='tag-button' value='Celebration' onClick={handleTagChange}>Celebration</button>
+        <button className='tag-button' value='Thank You' onClick={handleTagChange}>Thank You</button>
+        <button className='tag-button' value='Inspiration' onClick={handleTagChange}>Inspiration</button>
     </div>
     )
 }
