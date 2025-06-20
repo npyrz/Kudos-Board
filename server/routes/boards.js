@@ -59,19 +59,42 @@ router.post('/boards', async (req, res) => {
     }
 });
 
-// UPDATING A SPECFIC BOARD <- UPDATING THE BOARDS CARD
-router.put('/boards:id', async (req, res) => {
+// GET BOARD INFO PAGE BY ID
+router.get('/boards:id', async (req, res) => {
     const boardId = parseInt(req.params.id)
 
     try {
-        const board = await prisma.id.findUnique({
+        const board = await prisma.boards.findUnique({
             where: {
                 id: boardId
             }
         })
 
         if (board) {
-            res.json(pet)
+            res.json(board)
+        } else {
+            res.status(404).send("Board not found")
+        }
+    } catch (error) {
+        console.error("Error fetching board:", error)
+        res.status(500).json({error: "Something went wrong while trying to fethch the board"})
+    }
+});
+
+
+// UPDATING A SPECFIC BOARD <- UPDATING THE BOARDS CARD
+router.put('/boards:id', async (req, res) => {
+    const boardId = parseInt(req.params.id)
+
+    try {
+        const board = await prisma.boards.findUnique({
+            where: {
+                id: boardId
+            }
+        })
+
+        if (board) {
+            res.json(board)
         } else {
             res.status(404).send("Board not found")
         }
