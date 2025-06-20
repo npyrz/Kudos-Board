@@ -22,7 +22,6 @@ model Cards {
   description   String
   img           String
   owner         String?
-  upvote        Int.     @default(0)
-  boardId       Int
-  boards        Boards @relation(fields: [board_id], references: [id], onDelete: Cascade)
+  upvote        Int      @default(0)
+  board         Boards @relation(fields: [board_id], references: [id], onDelete: Cascade)
 }

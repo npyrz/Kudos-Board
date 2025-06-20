@@ -1,0 +1,31 @@
+.CardList{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.Card {
+    margin-top: 25px;
+    padding: 15px;
+    display: flex;
+    flex-flow: column wrap;
+    border-radius: 10px;
+    align-items: center;
+    background-color: #aaf0d1;
+    width: 225px;
+    border-color: #3EB489;
+    border-style: solid;
+}
+
+.buttonCard {
+    margin-left: 10px;
+    background-color: #3EB489;
+    color: black;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 15px;
+    border: none;
+    padding: 10px;
+}
