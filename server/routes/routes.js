@@ -60,7 +60,7 @@ router.post('/boards', async (req, res) => {
 });
 
 // GET BOARD INFO PAGE BY ID
-router.get('/boards:id', async (req, res) => {
+router.get('/boards/:id', async (req, res) => {
     const boardId = parseInt(req.params.id)
 
     try {
@@ -83,7 +83,7 @@ router.get('/boards:id', async (req, res) => {
 
 
 // UPDATING A SPECFIC BOARD <- UPDATING THE BOARDS CARD
-router.put('/boards:id', async (req, res) => {
+router.put('/boards/:id', async (req, res) => {
     const boardId = parseInt(req.params.id)
 
     try {
@@ -128,6 +128,43 @@ router.delete('/boards/:id', async (req, res) => {
         res.status(500).json({ error: "Something went wrong while deleting the board." })
     }
 })
+
+router.post('/boards/:id/cards', async (req, res) => {
+    const boardId = parseInt(req.params.id);
+    const { title, description, img, owner } = req.body;
+
+    try {
+    const card = await prisma.cards.create({
+    data: {
+        title,
+        description,
+        img,
+        owner,
+        board_id: boardId
+    }
+    });
+    res.status(201).json(card);
+    } catch (error) {
+    console.error("Error with making card", error)
+    res.status(500).json({ error: "Issue with creating card" })
+    }
+});
+
+// DISPLAYS ALL THE CARDS IN SPECIFIC BOARD
+router.get('/boards/:id/cards', async (req, res) => {
+    const boardId = parseInt(req.params.id);
+    try {
+        const cards = await prisma.cards.findMany({
+        where: {
+            board_id: boardId
+        }
+    });
+    res.json(cards);
+    } catch (err) {
+    console.error("Error with fetching cards", err)
+    res.status(500).json({ error: "Issue with fetching cards" })
+    }
+});
 
 
 module.exports = router
