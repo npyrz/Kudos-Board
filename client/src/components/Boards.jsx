@@ -10,7 +10,7 @@ function Board( { board, setBoard }) {
     }
 
     const handleDelete = async (boardId) => {
-    try {
+        try {
         const response = await fetch(`${baseURL}/boards/${boardId}`, {
             method: "DELETE",
             credentials: "include",
@@ -22,9 +22,9 @@ function Board( { board, setBoard }) {
             const data = await response.json();
             console.error("Failed to delete board:", data.error);
         }
-    } catch (error) {
-        console.error("Network error. Please try again.", error);
-    }
+        } catch (error) {
+            console.error("Network error. Please try again.", error);
+        }
     };
 
     return (

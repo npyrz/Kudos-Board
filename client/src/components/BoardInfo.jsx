@@ -12,10 +12,10 @@ function BoardInfo( { board } ) {
     const naviagate = useNavigate();
 
     useEffect(() => {
-    fetch(`${baseURL}/boards/${id}/cards`)
-        .then(res => res.json())
-        .then(data => setCards(data))
-        .catch(err => console.log("Error fetching cards", err));
+        fetch(`${baseURL}/boards/${id}/cards`)
+            .then(res => res.json())
+            .then(data => setCards(data))
+            .catch(err => console.log("Error fetching cards", err));
     }, [id]);
 
     const populateCard = (newCard) => {

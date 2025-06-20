@@ -15,9 +15,9 @@ function Card({ cards, setCards }) {
                 const data = await response.json();
                 console.error("Failed to delete card:", data.error);
             }
-        } catch (error) {
-            console.error("Network error. Please try again.", error);
-        }
+            } catch (error) {
+                onsole.error("Network error. Please try again.", error);
+            }
 };
 
 const handleUpvote = async (cardId) => {
