@@ -133,7 +133,7 @@ Deployed Application: [Kudos Board Deployed Site](https://kudos-board-1-toyh.onr
 
 ### Walkthrough Video
 
-`https://www.loom.com/share/79c7079173a84deb990802d9a5772864?sid=d2aeb276-3be4-4f7a-9c60-08bcf771eca4`
+https://www.loom.com/share/79c7079173a84deb990802d9a5772864?sid=d2aeb276-3be4-4f7a-9c60-08bcf771eca4
 
 ### Reflection
 
