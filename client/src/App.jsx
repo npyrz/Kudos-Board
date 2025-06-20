@@ -3,6 +3,7 @@ import Navbar from './components/Navbar'
 import Banner from './components/Banner'
 import Boards from './components/Boards'
 import Footer from './components/Footer'
+import BoardInfo from './components/BoardInfo'
 import { useEffect, useState } from 'react'
 import { baseURL } from './global'
 import { Routes, Route, BrowserRouter } from 'react-router';
@@ -67,16 +68,10 @@ function App() {
               <Footer/>
             </>
           }/>
-          <Route path="/boards/*" element={
+          <Route path="/boards/:id" element={
             <>
               <Banner/>
-              <Footer/>
-            </>
-          }/>
-          <Route path="/*" element={
-            <>
-              <Banner/>
-              {/* ADD: EROR PAGE */}
+              <BoardInfo board={board}/>
               <Footer/>
             </>
           }/>

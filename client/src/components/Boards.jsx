@@ -1,8 +1,13 @@
 import '/src/components/css/Boards.css'
-import BoardInfo from './BoardInfo'
 import { baseURL } from '../global';
+import { useNavigate, Link } from 'react-router';
 
 function Board( { board, setBoard }) {
+    const navigate = useNavigate();
+
+    const handleView = (id) => {
+        navigate(`/boards/${id}`)
+    }
 
     const handleDelete = async (boardId) => {
     try {
@@ -28,13 +33,12 @@ function Board( { board, setBoard }) {
             <div className="board-card" key={item.id}>
                 <img src={`https://picsum.photos/200/300?random=${imageIndex}`} alt='boardImage' className='imgBoard'/>
                 <h2>{item.title} </h2>
-                <p>{item.author}</p>
-        <div className='board-buttons'>
-        <button className='buttonBoard'>View Board</button>
-        <button className='buttonBoard' onClick={() => handleDelete(item.id)}>Delete Board</button>
-        </div>
-        <BoardInfo/>
-        </div>
+                <p>{item.category}</p>
+                <div className='board-buttons'>
+                    <button className='buttonBoard' onClick={() => handleView(item.id)}>View Board</button>
+                    <button className='buttonBoard' onClick={() => handleDelete(item.id)}>Delete Board</button>
+                </div>
+            </div>
         ))}
     </div>
     )

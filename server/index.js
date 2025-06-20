@@ -16,7 +16,7 @@ app.use(express.json())
 const boards = require('./routes/boards')
 // const cards = require('./routes/cards')
 
-app.use(boards)
+app.use('/', boards)
 // app.use(cards)
 
 app.listen(PORT, () =>  {
