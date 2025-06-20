@@ -12,7 +12,7 @@ function Search( {handleBoardSearch} ) {
     return (
     <div className='Search'>
         <form className="searchForm" onSubmit={handleForm}>
-            <input className="searchInput" type="text" name="board" placeholder="Search for boards..." onChange={(e) => handleBoardSearch(e.target.value)}/>
+            <input className="searchInput" type="text" name="board" placeholder="Search for boards..."/>
                 <button className="searchButton" type="submit">Search</button>
                 <button className='searchButton' type='button' onClick={() => handleBoardSearch('')}>Clear</button>
         </form>

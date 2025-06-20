@@ -17,6 +17,7 @@ function NewCard( { boardId, populateCard }) {
 
     const handleClose = () => {
         setModalStatus(false);
+        searchTerm('');
     };
 
     const handleSubmit = async (event) => {
@@ -80,7 +81,7 @@ function NewCard( { boardId, populateCard }) {
                     <h1>Create a New Card</h1>
                     <input className='cardInput' name='title' required placeholder="Enter card title"/>
                     <input className='cardInput' name='description' required placeholder="Enter card description" />
-                    <input className='cardInput' name='search-img' value={searchTerm} onChange={searchChange} placeholder="Search GIF..."/>
+                    <input className='cardInput' name='search-img' value={searchTerm} onChange={searchChange} required placeholder="Search GIF..."/>
                     <div className="showGif">
                         {gifs.map((gif) => (
                             <img 
@@ -95,7 +96,7 @@ function NewCard( { boardId, populateCard }) {
                     <div>
                         <button className="gifButton" onClick={getGif} type='button'>Search</button>
                     </div>
-                    <input className='cardInput' name='img' value={selectedGif} placeholder="GIF URL"/>
+                    <input className='cardInput' name='img' value={selectedGif} required placeholder="GIF URL"/>
                     <input className='cardInput' name='owner' placeholder="Enter owner (optional)" />
                     <div className='buttonDiv'>
                         <button className='createButton'>Create Card</button>

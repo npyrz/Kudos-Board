@@ -4,8 +4,8 @@ const cors = require('cors')
 const PORT = process.env.port ||3000
 
 app.use(cors({
-    //origin: 'http://localhost:5173',
-    origin: 'https://kudos-board-1-toyh.onrender.com',
+    origin: 'http://localhost:5173',
+    //origin: 'https://kudos-board-1-toyh.onrender.com',
     credentials: true
 }))
 
