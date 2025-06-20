@@ -46,7 +46,7 @@ const handleUpvote = async (cardId) => {
         <div className="Card" key={card.id}>
             <h2>{card.title}</h2>
             <p>{card.description}</p>
-            <img alt={card.title} className=""/>
+            <img alt={card.title} className="imgCard" src={card.img}/>
             <p>{card.owner}</p>
             <div className='cardButtons'>
                     <button className='buttonCard' onClick={() => handleUpvote(card.id)}>Upvote: {card.upvote}</button>

@@ -61,14 +61,14 @@ Deployed Application (**required**): [Kudos Board Deployed Site](https://kudos-b
   - [X] For a given board, the board's page displays a list of all cards for that board in a grid view.
   - [X] For each card should displayed, users can see the card's:
     - [X] Message
-    - [ ] Gif 
+    - [X] Gif 
     - [X] Number of upvotes
     - [X] Delete button
 - [X] **Add New Card**
   - [X] Users can make a new card associated with the current board. 
   - [X] To successfully create a new card, users must specify the following:
     - [X] Text message (required).
-    - [ ] A gif users can search for and select within the form using the [GIPHY API](https://developers.giphy.com/docs/api/) (required).
+    - [X] A gif users can search for and select within the form using the [GIPHY API](https://developers.giphy.com/docs/api/) (required).
   - [X] Users are given the option to specify the author of the card.
   - [X] When the new card is successfully created, it appears in the grid of cards. 
 - [X] **Upvote Card**

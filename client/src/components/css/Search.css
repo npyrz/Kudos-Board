@@ -4,7 +4,7 @@
     text-align: center;
 }
 
-.search-input {
+.searchInput {
     width: 300px;
     height: 23px;
     padding: 10px;
@@ -17,7 +17,7 @@ input::placeholder {
     color: black;
 }
 
-.search-button {
+.searchButton {
     margin-left: 15px;
     background-color: #3EB489;
     color: black;
