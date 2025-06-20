@@ -2,7 +2,7 @@
 
 Submitted by: **Noah Pyrzanowski**
 
-Deployed Application (**required**): [Kudos Board Deployed Site](https://kudos-board-1-toyh.onrender.com/)
+Deployed Application: [Kudos Board Deployed Site](https://kudos-board-1-toyh.onrender.com/)
 
 ### Application Features
 
@@ -130,12 +130,8 @@ Deployed Application (**required**): [Kudos Board Deployed Site](https://kudos-b
 - [ ] The pinned state of a card persists when:
   - [ ] navigating away from and back to the board.
   - [ ] refreshing the page. 
- 
-
 
 ### Walkthrough Video
-
-`TODO://` Add the embedded URL code to your animated app walkthrough below, `ADD_EMBEDDED_CODE_HERE`. Make sure the video or gif actually renders and animates when viewing this README. Ensure your walkthrough showcases the presence and/or functionality of all features you implemented above (check them off as you film!). Pay attention to any **VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS** checkboxes listed above to ensure graders see the full functionality of your website! (🚫 Remove this paragraph after adding walkthrough video)
 
 `ADD_EMBEDDED_CODE_HERE`
 
@@ -155,8 +151,10 @@ Add your response here
 
 ### Open-source libraries used
 
-- Add any links to open-source libraries used in your project.
-
 ### Shout out
 
-Give a shout out to somebody from your cohort that especially helped you during your project. This can be a fellow peer, instructor, TA, mentor, etc.
+- Bob
+- Carlos
+- Jesus
+- Terrence
+- Zen

@@ -17,9 +17,10 @@ function NewCard( { boardId, populateCard }) {
 
     const handleClose = () => {
         setModalStatus(false);
-        searchTerm('');
-    };
-
+        setSearchTerm('');
+        setSelectedGif('');
+        setGifs([]);
+};
     const handleSubmit = async (event) => {
         event.preventDefault();
         const title = event.target.title.value;
@@ -39,6 +40,9 @@ function NewCard( { boardId, populateCard }) {
         const data = await response.json();
         if (response.ok) {
             populateCard(data);
+            setSearchTerm('');
+            setSelectedGif('');
+            setGifs([]);
             handleClose();
         }
         } catch (err) {
