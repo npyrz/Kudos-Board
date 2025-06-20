@@ -30,7 +30,7 @@ function Board( { board, setBoard }) {
     return (
     <div className='Board'>
         {board.map((item, imageIndex) => (
-            <div className="board-card" key={item.id}>
+            <div className="boardCard" key={item.id}>
                 <img src={`https://picsum.photos/200/300?random=${imageIndex}`} alt='boardImage' className='imgBoard'/>
                 <h2>{item.title} </h2>
                 <p>{item.category}</p>

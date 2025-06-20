@@ -42,24 +42,24 @@ function NewBoard( { setBoard, board }) {
 
     return (
     <div className='NewBoard'>
-        <button className='newBoard-button' onClick={handleOpen}>Create New Board</button>
+        <button className='newBoardButton' onClick={handleOpen}>Create New Board</button>
         {modalStatus && (
-            <div className="modal-overlay">
-                <div className="modal-content">
+            <div className="modalOverlay">
+                <div className="modalContent">
                     <form onSubmit={handleSubmit}>
                         <button className="exitButton" onClick={handleClose}><i className="fa fa-close"></i></button>
                         <h1>Create a New Board</h1>
                         <h3>Title:</h3>
-                        <input className='board-input' name='title' required/>
+                        <input className='boardInput' name='title' required/>
                         <h3>Category:</h3>
-                        <select id='selectTag' className='board-input' name='category' required defaultValue="">
+                        <select id='selectTag' className='boardInput' name='category' required defaultValue="">
                             <option value="">Select a category</option>
                             <option value='Celebration'>Celebration</option>
                             <option value='Thank You'>Thank You</option>
                             <option value='Inspiration'>Inspiration</option>
                         </select>
                         <h3>Author:</h3>
-                        <input className='board-input' name='author'/>
+                        <input className='boardInput' name='author'/>
                         <div className='buttonDiv'>
                             <button className='createButton'>Create Board</button>
                         </div>

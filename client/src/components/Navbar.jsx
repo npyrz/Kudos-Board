@@ -1,4 +1,3 @@
-import '/src/components/css/Navbar.css'
 import Search from './Search'
 import Tags from './Tags'
 import NewBoard from './NewBoard'

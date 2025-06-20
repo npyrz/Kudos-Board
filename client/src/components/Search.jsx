@@ -11,10 +11,10 @@ function Search( {handleBoardSearch} ) {
 
     return (
     <div className='Search'>
-        <form className="search-form" onSubmit={handleForm}>
-            <input className="search-input" type="text" name="board" placeholder="Search for boards..." onChange={(e) => handleBoardSearch(e.target.value)}/>
-                <button className="search-button" type="submit">Search</button>
-                <button className='search-button' type='button' onClick={() => handleBoardSearch('')}>Clear</button>
+        <form className="searchForm" onSubmit={handleForm}>
+            <input className="searchInput" type="text" name="board" placeholder="Search for boards..." onChange={(e) => handleBoardSearch(e.target.value)}/>
+                <button className="searchButton" type="submit">Search</button>
+                <button className='searchButton' type='button' onClick={() => handleBoardSearch('')}>Clear</button>
         </form>
     </div>
     )
