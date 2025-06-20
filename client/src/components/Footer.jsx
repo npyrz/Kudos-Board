@@ -4,7 +4,7 @@ function Footer() {
 
     return (
     <div className='Footer'>
-        
+        Created By: Noah Pyrzanowski for CodePath
     </div>
     )
 }

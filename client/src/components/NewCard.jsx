@@ -42,18 +42,25 @@ function NewCard( { boardId, populateCard }) {
 
 
     return (
-    <div className='NewBoard'>
-        <button className='newBoard-button' onClick={handleOpen}>Create a Card</button>
+    <div className='NewCard'>
+        <button className='newCard-button' onClick={handleOpen}>Create a Card</button>
         {modalStatus && (
             <div className="modal-overlay">
                 <div className="modal-content">
                     <form onSubmit={handleSubmit}>
                         <button className="exitButton" onClick={handleClose}><i className="fa fa-close"></i></button>
                         <h1>Create a New Card</h1>
-                        <input className='board-input' name='title' required placeholder="test"/>
-                        <input className='board-input' name='description'/>
-                        <input className='board-input' name='img'/>
-                        <input className='board-input' name='owner'/>
+                        <input className='card-input' name='title' required placeholder="Enter card title"/>
+                        <input className='card-input' name='description' required placeholder="Enter card description"/>
+                        <input className='card-input' name='search-img' placeholder="Search GIF..."/>
+                        <div>
+                            <button className="gifButton">Search</button>
+                        </div>
+                        <input className='card-input' name='img' required placeholder="Enter GIF URL"/>
+                        <div>
+                            <button className="gifButton">Copy GIF URL</button>
+                        </div>
+                        <input className='card-input' name='owner' placeholder="Enter owner (optional)"/>
                         <div className='buttonDiv'>
                         <button className='createButton'>Create Card</button>
                         </div>

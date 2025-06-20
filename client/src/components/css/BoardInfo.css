@@ -11,3 +11,13 @@
     border: none;
     padding: 10px;
 }
+
+.backButton {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: auto;
+    background-color: transparent;
+    border: none;
+    font-size: 45px;
+    color: black;
+}

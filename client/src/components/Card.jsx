@@ -26,9 +26,9 @@ const handleUpvote = async (cardId) => {
                 method: "PUT",
                 headers: { "Content-Type": 'application/json'}
             });
-            const updatedCard = await response.json();
 
             if (response.ok) {
+                const updatedCard = await response.json();
                 setCards(prevCards => prevCards.map(card => card.id === cardId ? updatedCard : card));
             } else {
                 const data = await response.json();
