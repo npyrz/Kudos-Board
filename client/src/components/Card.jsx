@@ -1,26 +1,56 @@
 import '/src/components/css/Card.css'
-import { useEffect, useState } from 'react'
-import { baseURL } from '../global'
+import { baseURL } from '../global';
 
-function Card({ boardId }) {
-    const [cards, setCards] = useState([]);
-    useEffect(() => {
-    fetch(`${baseURL}/boards/${boardId}/cards`)
-        .then(res => res.json())
-        .then(data => setCards(data))
-        .catch(err => console.log("Error fetching cards", err));
-    }, [boardId]);
+function Card({ cards, setCards }) {
+
+    const handleDelete = async (cardId) => {
+        try {
+            const response = await fetch(`${baseURL}/cards/${cardId}`, {
+                method: "DELETE",
+                credentials: "include",
+            });
+            if (response.ok) {
+                setCards(cards.filter(card => card.id !== cardId));
+            } else {
+                const data = await response.json();
+                console.error("Failed to delete card:", data.error);
+            }
+        } catch (error) {
+            console.error("Network error. Please try again.", error);
+        }
+};
+
+const handleUpvote = async (cardId) => {
+    try {
+        const response = await fetch(`${baseURL}/cards/${cardId}/upvote`, {
+                method: "PUT",
+                headers: { "Content-Type": 'application/json'}
+            });
+            const updatedCard = await response.json();
+
+            if (response.ok) {
+                setCards(prevCards => prevCards.map(card => card.id === cardId ? updatedCard : card));
+            } else {
+                const data = await response.json();
+                console.error("Failed to upvote card:", data.error);
+            }
+        } catch (error) {
+            console.error("Network error. Please try again.", error);
+    }
+}
+
+
     return (
     <div className='CardList'>
         {cards.map(card => (
         <div className="Card" key={card.id}>
             <h2>{card.title}</h2>
             <p>{card.description}</p>
-            <img src="" alt={card.title} className=""/>
+            <img alt={card.title} className=""/>
             <p>{card.owner}</p>
             <div className='cardButtons'>
-                    <button className='buttonCard' >Upvote:</button>
-                    <button className='buttonCard' >Delete Card</button>
+                    <button className='buttonCard' onClick={() => handleUpvote(card.id)}>Upvote: {card.upvote}</button>
+                    <button className='buttonCard' onClick={() => handleDelete(card.id)}>Delete Card</button>
             </div>
         </div>
         ))}
