@@ -1,8 +1,8 @@
-import '/src/components/css/NewBoard.css'
+import '/src/components/css/NewCard.css'
 import { useState } from 'react'
 import { baseURL } from '../global';
 
-function NewBoard( { setBoard, board }) {
+function NewCard( { setBoard, board }) {
     const [modalStatus, setModalStatus] = useState(false);
 
     const handleOpen = () => {
@@ -42,7 +42,7 @@ function NewBoard( { setBoard, board }) {
 
     return (
     <div className='NewBoard'>
-        <button className='newBoard-button' onClick={handleOpen}>Create New Board</button>
+        <button className='newBoard-button' onClick={handleOpen}>Create a Card</button>
         {modalStatus && (
             <div className="modal-overlay">
                 <div className="modal-content">
@@ -61,7 +61,7 @@ function NewBoard( { setBoard, board }) {
                         <h3>Author:</h3>
                         <input className='board-input' name='author'/>
                         <div className='buttonDiv'>
-                            <button className='createButton'>Create Board</button>
+                            <button className='createButton'>Create Card</button>
                         </div>
                     </form>
                 </div>
@@ -71,4 +71,4 @@ function NewBoard( { setBoard, board }) {
     )
 }
 
-export default NewBoard
+export default NewCard
