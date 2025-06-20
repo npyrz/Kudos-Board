@@ -133,21 +133,21 @@ Deployed Application: [Kudos Board Deployed Site](https://kudos-board-1-toyh.onr
 
 ### Walkthrough Video
 
-`ADD_EMBEDDED_CODE_HERE`
+`https://www.loom.com/share/79c7079173a84deb990802d9a5772864?sid=d2aeb276-3be4-4f7a-9c60-08bcf771eca4`
 
 ### Reflection
 
 * Did the topics discussed in your labs prepare you to complete the assignment? Be specific, which features in your weekly assignment did you feel unprepared to complete?
 
-Add your response here
+I definitly believe that the topics we covered in the lessons and then covered during the labs was definitly a lot of help with completing the project because I believe the labs showed some direct corelation with the material we had to complete during the project and it was good to get some hands on expierence after learning the material in the lesson. I also enjoyed the live demos because we got to see more direct examples from the lesson. I believe the labs covered most parts of the project and made me feel confident to complete but there were some small things I had to learn on my own.
 
 * If you had more time, what would you have done differently? Would you have added additional features? Changed the way your project responded to a particular event, etc.
-  
-Add your response here
+
+If I had more time I definitly would a little less time on the CSS side and spend more time on my features and working out on some stretch feautres. But overall I felt the most confident this week and I believe it was the funnest project with putting everything together. Regarding the project I definitly would try to optimize and organize my code better and make it perfect for someone else to understand. Overall even though I didn't get to do the stretch features I still worked hard and enjoyed working on this project and learning.
 
 * Reflect on your project demo, what went well? Were there things that maybe didn't go as planned? Did you notice something that your peer did that you would like to try next time?
 
-Add your response here
+Regarding my project demo I believe that everything went majority of the way good, I definitly beleive that it was my funnest project putting everything together. I believe that my CSS was the best on this project and regarding the backend I definitly had a small struggle in small parts but there were no major blocks. My only issue was just the amount of work and the amount of time we had during the week, but overall I would say the peers were very helpful with helping with issues.
 
 ### Open-source libraries used
 
