@@ -202,7 +202,7 @@ router.put('/cards/:id/upvote', async (req, res) => {
                 upvote: {increment: 1}
             }
         });
-        res.join(updateCard);
+        res.json(updateCard);
     }
     catch (error) {
         console.error("Error upvoting the card", error)

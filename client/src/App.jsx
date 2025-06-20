@@ -24,13 +24,12 @@ function App() {
 
   // FETCH CALL FOR DISPLAYING SEARCH QUERY'S
   useEffect(() => {
-      if (query != '') {
-      fetch(`${baseURL}/boards?q=${query}`)
+    const url = query !== '' ? `${baseURL}/boards?q=${query}` : `${baseURL}/boards`;
+      fetch(url)
       .then(response => response.json())
       .then((data) => {
         setBoard(data);
       })
-    }
   },[query]);
 
   // FETCH CALL FOR TAG TOGGLE DISPLAY
