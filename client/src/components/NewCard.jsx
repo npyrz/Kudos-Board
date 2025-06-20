@@ -2,7 +2,7 @@ import '/src/components/css/NewCard.css'
 import { useState } from 'react'
 import { baseURL } from '../global';
 
-function NewCard( { boardId }) {
+function NewCard( { boardId, populateCard }) {
     const [modalStatus, setModalStatus] = useState(false);
 
     const handleOpen = () => {
@@ -29,10 +29,10 @@ function NewCard( { boardId }) {
             credentials: "include",
         });
 
-        //const data = await response.json();
+        const data = await response.json();
 
         if (response.ok) {
-            // setCard([...card, data]);
+            populateCard(data);
             handleClose();
         }
         } catch (err) {

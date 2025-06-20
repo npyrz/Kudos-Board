@@ -166,5 +166,49 @@ router.get('/boards/:id/cards', async (req, res) => {
     }
 });
 
+router.delete('/cards/:id', async (req, res) => {
+    const cardId = parseInt(req.params.id)
+
+    try {
+        const card = await prisma.cards.findUnique({
+            where: { id: cardId }
+        })
+
+        if (!card) {
+            return res.status(404).json({ error: "Card not found" })
+        }
+
+        await prisma.cards.delete({
+            where: { id: cardId }
+        })
+
+        res.json({ message: "Card deleted successfully" })
+    } catch (error) {
+        console.error("Error deleting card:", error)
+        res.status(500).json({ error: "Something went wrong while deleting the card." })
+    }
+})
+
+
+router.put('/cards/:id/upvote', async (req, res) => {
+    const cardId = parseInt(req.params.id);
+
+    try {
+        const updateCard = await prisma.cards.update({
+            where: {
+                id: cardId
+            },
+            data: {
+                upvote: {increment: 1}
+            }
+        });
+        res.join(updateCard);
+    }
+    catch (error) {
+        console.error("Error upvoting the card", error)
+        res.status(500).json({error: "issue with incrementing the card"})
+    }
+})
+
 
 module.exports = router
